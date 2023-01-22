@@ -9,9 +9,8 @@ export default function Layout({ children }: { children: ReactNode }) {
         <div className="App">
             <header className="App-header">
                 <Link to="/">
-                <img src={logo} className="App-logo" alt="logo" />
+                    <img src={logo} className="App-logo" alt="logo" />
                 </Link>
-                <Link to="blog">hey</Link>
                 <div>
                     { children }
                 </div>

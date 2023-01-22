@@ -18,7 +18,7 @@ export default function ArticleIndex() {
                 {articles.map((article: articleJson) => {
                     return (
                         <div className="article-card" key={article.id}>
-                            <Link to={`/${article.id}`}>
+                            <Link to={`blog/${article.id}`}>
                                 <h2 className="article-title">{article.title}</h2>
                             </Link>
                             <p className="article-body">{article.summary}</p>

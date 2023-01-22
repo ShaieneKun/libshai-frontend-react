@@ -8,11 +8,11 @@ export default function Router() {
     return (
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={
+                <Route path="*" element={
                     <Layout>
                         <Routes>
                             <Route index element={< ArticleIndex />} />
-                            <Route path="blog" element={< ArticleDetail />} />
+                            <Route path="blog/:id" element={< ArticleDetail />} />
                         </Routes>
                     </Layout>
                 }>
