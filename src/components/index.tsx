@@ -1,6 +1,7 @@
 import React from 'react';
 import { articleJson, ArticleAPI, ArticleArrayJson } from '../services/api/articles';
 import { Link } from 'react-router-dom';
+import Loading from './loading'
 
 export default function ArticleIndex() {
     const [articles, setArticles] = React.useState<ArticleArrayJson | []>([])
@@ -10,6 +11,15 @@ export default function ArticleIndex() {
             (responseJson: ArticleArrayJson) => setArticles(responseJson),
         )
     }, [])
+
+    console.log(articles);
+
+    if (articles.length === 0) {
+        return (
+            <Loading />
+        )
+    }
+
 
     return (
         <div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
+import Loading from './loading'
 import { articleJson, ArticleAPI } from '../services/api/articles';
 
 export default function ArticleDetail() {
@@ -28,8 +29,6 @@ export default function ArticleDetail() {
     }
 
     return (
-        <div>
-            <p>Loading...</p>
-        </div>
+        <Loading />
     )
 }
