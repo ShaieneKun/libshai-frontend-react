@@ -23,6 +23,7 @@ export default function ArticleIndex() {
 
     return (
         <div>
+
             <h1>Articles</h1>
             <div className="posts-container">
                 {articles.map((article: articleJson) => {
