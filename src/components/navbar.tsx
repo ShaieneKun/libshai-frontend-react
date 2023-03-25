@@ -13,6 +13,8 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 
+import LotusLogoImage from "../assets/lotus.png"
+
 const pages = ['Products', 'Pricing', 'Blog'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
@@ -40,6 +42,7 @@ function ResponsiveAppBar() {
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
                     {/* <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> */}
+                    <LotusLogo />
                     <Typography
                         variant="h5"
                         noWrap
@@ -160,3 +163,15 @@ function ResponsiveAppBar() {
     );
 }
 export default ResponsiveAppBar;
+
+function LotusLogo() {
+    return <img
+        src={LotusLogoImage}
+        alt="Minael's blog lotus logo"
+        style={{
+            width: "05%",
+            // height: "600%"
+        }}
+
+    />;
+}
