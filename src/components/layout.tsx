@@ -1,17 +1,16 @@
 import { Link } from 'react-router-dom';
-
-import logo from '../logo.svg';
-import '../App.css';
 import { ReactNode } from 'react';
 
+import logo from '../logo.svg';
 import Button from '@mui/material/Button';
+import ResponsiveAppBar from './navbar';
+
+import '../App.css';
 
 export default function Layout({ children }: { children: ReactNode }) {
     return (
         <div className="App">
-            <head>
-                <meta name="viewport" content="initial-scale=1, width=device-width" />
-            </head>
+            <ResponsiveAppBar />
             <header className="App-header">
                 <Link to="/">
                     <img src={logo} className="App-logo" alt="logo" />
